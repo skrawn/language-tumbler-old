@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { Translate } from '@google-cloud/translate';
+
+import { GoogleTranslateService } from './google-translate.service';
 
 @Component({
   selector: 'app-root',
@@ -14,12 +15,7 @@ export class AppComponent implements OnInit {
   ];
   public translateList;
 
-  // private translate = new Translate({
-  //   projectId: 'languagetumbler'
-  // });
-
-
-  constructor() {
+  constructor(private gtService: GoogleTranslateService) {
   }
 
   ngOnInit() {
